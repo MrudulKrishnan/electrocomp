@@ -1,0 +1,22 @@
+{% extends 'style.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        {% for i in products %}
+        <div class="col-md-3"><br>
+            <div class="card" style="width: 12rem;background-color:#a19f9f">
+              <img class="card-img-top" src="{{i.image.url}}" alt="Card image cap" style="width:190px;height:120px">
+              <div class="card-body">
+                <h5 class="card-title" style="color:#3c4021;font-size:20px">{{i.name}}</h5>
+                  <!--    <p class="card-text">{{i.desc}}</p>-->
+                <a href="{% url 'myapp:detail' i.id %}" class="btn btn-primary">Go Details</a>
+              </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+    <a href="{% url 'myapp:add_comp' %}" style="color:green;font-size:30px">add</a>
+{% endblock %}

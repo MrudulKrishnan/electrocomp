@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'my_style\style.css' %}">
+     <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand" href="#" style="color:#69682e;font-size:50px">Future Electro</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" style="color:#3f692e;font-size:20px">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#3f692e;font-size:20px">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" style="color:#3f692e;font-size:20px">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" style="color:#3f692e;font-size:20px">Disabled</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link Help" href="#" style="color:#3f692e;font-size:20px">Help</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</head>
+<body>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>

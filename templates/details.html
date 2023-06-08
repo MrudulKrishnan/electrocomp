@@ -1,0 +1,30 @@
+{% extends 'style.html' %}
+{% block body %}
+<html>
+<head>
+    <title>
+        Details
+    </title>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"><br>
+            <div class="card" style="width: 22rem;background-color:#a19f9f">
+              <img class="card-img-top" src="{{product_key.image.url}}" alt="" style="width:350px;height:300px;"><br>
+              <div class="card-body">
+                    <h5 class="card-title" style="color:#3c4021;font-size:20px">{{product_key.name}}</h5>
+                    <p class="card-text"> Description: {{product_key.desc}}</p>
+                    Component Price: {{product_key.price}}rs<br>
+                    <a class="btn btn-warning" href="{% url 'myapp:update' product_key.id %}">UPDATE</a>
+                    <a class="btn btn-danger" href="{% url 'myapp:delete' product_key.id %}">DELETE</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}
